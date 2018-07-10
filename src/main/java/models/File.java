@@ -61,8 +61,10 @@ public class File {
         this.sizeInKilobytes = sizeInKilobytes;
     }
 
-    @Column(name = "folder")
-        public Folder getFolder(){
+
+    @ManyToOne
+    @JoinColumn(name = "folder_id", nullable = false)
+    public Folder getFolder(){
         return this.folder;
     }
 

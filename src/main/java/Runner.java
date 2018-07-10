@@ -10,20 +10,23 @@ public class Runner {
 
     public static void main(String[] args) {
 
-        Folder UniversityWork = new Folder("University work");
+        Owner james = new Owner("James Henderson", "jah1603");
+        DBHelper.save(james);
+
+        Folder UniversityWork = new Folder("University work", james);
         DBHelper.save(UniversityWork);
 
-        Folder ResearchProject = new Folder("NHS research project");
+        Folder ResearchProject = new Folder("NHS research project", james);
         DBHelper.save(ResearchProject);
 
         File file1 = new File("Dissertation final submission", ".doc", 256, UniversityWork);
         DBHelper.save(file1);
 
         File file2 = new File("Supervisor meeting notes", ".doc", 120, UniversityWork);
-        DBHelper.save(file1);
+        DBHelper.save(file2);
 
         File file3 = new File("Statistical modelling plan", ".doc", 512, ResearchProject);
-        DBHelper.save(file1);
+        DBHelper.save(file3);
 
 
 

@@ -53,12 +53,12 @@ public class Owner {
     }
 
 
-    @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
-    public List<Folder> getFiles(){
+    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+    public List<Folder> getFolders(){
         return this.folders;
     }
 
-    public void setCrew(List<Folder> folders) {
+    public void setFolders(List<Folder> folders) {
         this.folders = folders;
     }
 }
