@@ -53,7 +53,7 @@ public class Owner {
     }
 
 
-    @OneToMany(mappedBy = "owner", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "owner", fetch = FetchType.EAGER)
     public List<Folder> getFolders(){
         return this.folders;
     }

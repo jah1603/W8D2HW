@@ -2,6 +2,7 @@ import db.DBHelper;
 
 import java.util.List;
 
+import db.DBOwner;
 import models.File;
 import models.Folder;
 import models.Owner;
@@ -45,6 +46,8 @@ public class Runner {
         List<File> newList = DBHelper.getAll(File.class);
 
         Folder foundFolder = DBHelper.find(Folder.class, UniversityWork.getId());
+
+        List<Folder> jamesfolders = DBOwner.getFoldersForOwner(james);
 
     }
 }

@@ -41,7 +41,7 @@ public class Folder {
     }
 
 
-    @OneToMany(mappedBy = "folder", fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "folder", fetch = FetchType.EAGER)
     public List<File> getFiles(){
         return this.files;
     }
